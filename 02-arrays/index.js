@@ -62,24 +62,39 @@ for (let i = 0; i < starWars.length; i++) {
 
 
 for (let personIndex in starWars) {
-    console.log(starWars[personIndex].firstName)
+    // console.log(starWars[personIndex].firstName)
 }
 
 for (let person of starWars) {
-    console.log(person.firstName)
+    // console.log(person.firstName)
 }
 
 
 // Operadores aritmeticos = + - * /
 
-console.log(1 + 1)
+/* console.log(1 + 1)
 console.log(2 - 1)
 console.log(2 * 3)
 console.log(4 / 2)
 console.log(4 % 2) // Resto da divisão
+*/
 
 // --- Concatenação +
 const idade = 31
-console.log("Jose Claudio " + " da Silva Junior " + " - tenho " + idade + " anos");
+// console.log("Jose Claudio " + " da Silva Junior " + " - tenho " + idade + " anos");
 
+let contador = 0
+
+// enquanto
+while (contador < 5) {
+    // console.log("contador: " + contador)
+    contador++
+}
+
+contador = 0
+
+do {
+    // console.log("do while contador: " + contador)
+    contador++
+} while(contador > 5)
 

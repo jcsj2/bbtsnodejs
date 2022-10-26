@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon 02-arrays/index.js --quiet"
+    "dev": "nodemon 03-structure-control/index.js --quiet"
   },
   "keywords": [],
   "author": "",
