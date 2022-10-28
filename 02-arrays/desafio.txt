@@ -1,4 +1,19 @@
+Desafio principal:
+
 Crie uma lista de clientes com primeiroNome, ultimoNome, cpfOuCnpj, contato.
 Converta (map) em outra lista que será composta por nomeCompleto e seEFisicaOuJuridica.
 
 Depois separe em mais 2 listas de fisicas e juridicas.
+
+
+------
+
+Extra 1:
+
+Com uma lista de alunos onde cada objeto aluno é composta por Nome, Turma e Nota. Retorne uma lista só 
+dos alunos aprovados (nota >= 7).
+
+Extra 2:
+
+Com a mesma lista de alunos, separe em sub listas separadas por turma. Dica: utilize aqui a estrutura MAP (new Map()) que aprendemos para
+agrupar turma <-> alunos da turma.
