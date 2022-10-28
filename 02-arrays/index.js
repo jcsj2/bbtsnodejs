@@ -98,3 +98,75 @@ do {
     contador++
 } while(contador > 5)
 
+
+// function itere(personagem) {
+   // console.log(personagem);
+// }
+
+const itere = (personagem) => {
+    console.log(personagem.lastName);
+}
+
+// starWars.forEach(itere)
+
+//forEach - itera sobre cada elemento (loop em cada elemento)
+starWars.forEach(function (personagem) {
+    // console.log(personagem.firstName)
+})
+
+starWars.forEach((personagem) => {
+    // console.log(personagem)
+})
+
+function seEJedi(personagem) {
+    return personagem.jedi;
+}
+
+//find - encontra o primeiro baseado numa condicao
+const primeiroJediDaLista = starWars.find((personagem) => {
+    return personagem.jedi
+});
+// console.log(primeiroJediDaLista)
+
+//filter - encontra todos baseado numa condicao
+const jedisDaLista = starWars.filter((personagem) => {
+    return personagem.jedi
+});
+
+// console.log(jedisDaLista)
+
+//some - retorna se existe ao menos 1 elemento que seja baseado numa condicao
+const temJedi = starWars.some((personagem) => {
+    return personagem.jedi && personagem.firstName === "Darth Vader"
+});
+
+// console.log(temJedi)
+
+//everhy - se todos os elementos retornem TRUE baseado numa condicao
+const soTemJedi = starWars.every((personagem) => {
+    return personagem.jedi
+});
+
+// console.log(soTemJedi)
+
+let novaLista = []
+
+starWars.forEach((personagem) => {
+    const personagemFormatado = {
+        nomeCompleto: personagem.firstName + " " + personagem.lastName
+    }
+
+    novaLista.push(personagemFormatado)
+})
+
+console.log(novaLista)
+
+//map - retorna uma nova lista da forma que vc ensinar
+novaLista = starWars.map((personagem) => {
+    return {
+        nomeCompleto: personagem.firstName + " - " + personagem.lastName,
+        aniversario: new Intl.DateTimeFormat('pt-BR').format(personagem.birthDay)
+    }
+})
+
+console.log(novaLista)
