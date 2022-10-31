@@ -1,0 +1,7 @@
+Desafio
+
+[] Classe time com as propriedades: nome, endereco, jogadores
+[] Classe jogador com as propriedades: nome, numeroCamisa
+[] Criar funcao para adicionar jogadores no time 
+[] imprimir o time (função da classe time), colocando nome e numero da camisa utilizando o Template Literals
+[] imprimir o nome e numero (juntos) do jogar (função na classe jogador)

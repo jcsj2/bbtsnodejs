@@ -1,9 +1,9 @@
 Desafio principal:
 
-Crie uma lista de clientes com primeiroNome, ultimoNome, cpfOuCnpj, contato.
-Converta (map) em outra lista que será composta por nomeCompleto e seEFisicaOuJuridica.
+[x] Crie uma lista de clientes com primeiroNome, ultimoNome, cpfOuCnpj, contato.
+[x] Converta (map) em outra lista que será composta por nomeCompleto e seEFisicaOuJuridica.
 
-Depois separe em mais 2 listas de fisicas e juridicas.
+[x] Depois separe em mais 2 listas de fisicas e juridicas.
 
 
 ------
