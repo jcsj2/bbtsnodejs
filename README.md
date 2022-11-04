@@ -11,3 +11,8 @@
 - Javascript
   - Arrays
     - [10 Funções Array em JavaScript para Você Ganhar Tempo ao Tratar Dados - Root #12](https://www.youtube.com/watch?v=-f5E5Lhocuo)
+
+
+- Módulos que iremos utilizar no NodeJS
+  - Axios - https://www.npmjs.com/package/axios
+  - FS (node) - https://nodejs.org/api/fs.html

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon 06-classes/heranca.js --quiet"
+    "dev": "nodemon 07-es6/index.js --quiet"
   },
   "keywords": [],
   "author": "",
