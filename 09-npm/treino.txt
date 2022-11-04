@@ -1,0 +1,9 @@
+Utilize o módulo NPM Validator (https://www.npmjs.com/package/validator) 
+e valide o máximo de dados possíveis de um objeto cliente com essa estrutura (preencha os dados):
+
+const cliente = {
+    nome: "",
+    email: "",
+    idade: 0
+}
+
