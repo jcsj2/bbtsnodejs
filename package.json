@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon 07-es6/index.js --quiet"
+    "dev": "nodemon 08-node/revisao.js --quiet"
   },
   "keywords": [],
   "author": "",
