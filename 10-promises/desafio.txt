@@ -1,0 +1,2 @@
+Utilize a lib "axios" que já vimos em aula. E faça requisições utilizando tanto promises com then, quanto com async await
+para pegar dados na API: https://animechan.vercel.app/api/random e mande gravar o(s) retorno(s) em um arquivo.
