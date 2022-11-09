@@ -1,0 +1,12 @@
+HTTPS -> Protocolo WEB
+
+Verbos HTTP
+
+Exemplo Facebook:
+
+- GET (Pego coisas no servidor) --> Lista de amigos
+- POST (Crio coisas no servidor) --> Criar uma postagem
+- PUT (Troco coisas no servidor) --> Editar uma postagem por completo
+- DELETE (Apago coisas no servidor) --> Apagar uma postagem
+- PATCH (Atualizo algumas coisas no servidor) --> Trocar apenas o texto da postagem / Apagar minha foto de perfil
+

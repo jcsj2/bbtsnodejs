@@ -1,14 +1,17 @@
 {
-  "name": "javascript",
+  "name": "11-http",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "servidor.js",
   "scripts": {
-    "dev": "nodemon 11-http/index.js --quiet"
+    "dev": "nodemon servidor.js --quiet"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
