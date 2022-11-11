@@ -11,3 +11,7 @@ Content-Type: application/json
     "nome": "Harry Potter",
     "email": "harrypotter@email.com"
 }
+
+### Deletar Clientes
+
+DELETE http://localhost:8080/apagarCliente/abc@email.com/meuid/meucodigo

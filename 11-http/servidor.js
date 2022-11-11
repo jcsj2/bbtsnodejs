@@ -31,6 +31,23 @@ app.post('/criarCliente', (request, response) => {
 
 })
 
+app.delete('/apagarCliente/:email', (request, response) => {
+    
+    const { email } = request.params
+
+    const indiceDoClienteEncontrado = clientes.findIndex((cliente) => cliente.email === email)
+
+    if (indiceDoClienteEncontrado === -1) {
+        response.status(404).json({
+            codigo: 'ERR_CLI_01',
+            mensagem: 'Cliente não encontrado'
+        })
+    } else {
+        clientes.splice(indiceDoClienteEncontrado, 1)
+        response.send()
+    }
+})
+
 app.listen('8080', () => {
     console.log('Servidor express iniciado')
 })
