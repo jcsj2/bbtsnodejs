@@ -1,6 +1,10 @@
-const express = require('express')
+const express = require('express') //alternativa fastify
+const morgan = require('morgan')
 
 const app = express()
+app.use(express.json())
+app.use(morgan('common'))
+
 
 const clientes = [
     {
@@ -11,25 +15,20 @@ const clientes = [
         nome: 'Maria',
         email: 'maria@email.com'
     },
-    {
-        nome: 'Joao',
-        email: 'joao@email.com'
-    },
 ]
 
 app.get('/pegarClientes', (request, response) => {
     response.json(clientes)
 })
 
-app.get('/pegarNomesDosClientes', (request, response) => {
+app.post('/criarCliente', (request, response) => {
 
-    const nomesDosClientes = clientes.map((cliente) => {
-        return {
-            nome: cliente.nome
-        }
-    });
+    const body = request.body
 
-    response.json(nomesDosClientes)
+    clientes.push(body)
+
+    response.send()
+
 })
 
 app.listen('8080', () => {

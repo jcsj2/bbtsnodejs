@@ -10,3 +10,9 @@ Exemplo Facebook:
 - DELETE (Apago coisas no servidor) --> Apagar uma postagem
 - PATCH (Atualizo algumas coisas no servidor) --> Trocar apenas o texto da postagem / Apagar minha foto de perfil
 
+
+-> Middleware <-
+
+Algo no meio da operação
+
+Request ----   [Middleware]   ---- Response
