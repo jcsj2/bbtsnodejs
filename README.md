@@ -20,3 +20,4 @@
 
 - Curiosidades
   - Integrando mysql com o nodeJS - https://medium.com/@almeida.adriano/integrando-o-mysql-ao-nodejs-84dd5a9c8396
+  - Status HTTP mais comuns - https://www.dotcom-monitor.com/blog/pt-br/2021/05/13/os-10-codigos-de-status-http-mais-comuns/

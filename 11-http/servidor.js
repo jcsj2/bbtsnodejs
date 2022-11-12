@@ -8,10 +8,12 @@ app.use(morgan('common'))
 
 const clientes = [
     {
+        id: '1',
         nome: 'Ze',
         email: 'ze@email.com'
     },
     {
+        id: '2',
         nome: 'Maria',
         email: 'maria@email.com'
     },
@@ -31,11 +33,11 @@ app.post('/criarCliente', (request, response) => {
 
 })
 
-app.delete('/apagarCliente/:email', (request, response) => {
+app.delete('/apagarCliente/:id', (request, response) => {
     
-    const { email } = request.params
+    const { id } = request.params
 
-    const indiceDoClienteEncontrado = clientes.findIndex((cliente) => cliente.email === email)
+    const indiceDoClienteEncontrado = clientes.findIndex((cliente) => cliente.id === id)
 
     if (indiceDoClienteEncontrado === -1) {
         response.status(404).json({
@@ -44,6 +46,42 @@ app.delete('/apagarCliente/:email', (request, response) => {
         })
     } else {
         clientes.splice(indiceDoClienteEncontrado, 1)
+        response.send()
+    }
+})
+
+app.get('/pegarCliente/:id', (request, response) => {
+    
+    const { id } = request.params
+
+    const indiceDoClienteEncontrado = clientes.findIndex((cliente) => cliente.id === id)
+
+    if (indiceDoClienteEncontrado === -1) {
+        response.status(404).json({
+            codigo: 'ERR_CLI_01',
+            mensagem: 'Cliente não encontrado'
+        })
+    } else {
+        const clienteEncontrado = clientes[indiceDoClienteEncontrado]
+        response.json(clienteEncontrado)
+    }
+})
+
+app.put('/atualizarCliente/:id', (request, response) => {
+    
+    const id = request.params.id
+    // const { id } = request.params
+    const body = request.body
+
+    const indiceDoClienteEncontrado = clientes.findIndex((cliente) => cliente.id === id)
+
+    if (indiceDoClienteEncontrado === -1) {
+        response.status(404).json({
+            codigo: 'ERR_CLI_01',
+            mensagem: 'Cliente não encontrado'
+        })
+    } else {
+        clientes[indiceDoClienteEncontrado] = body
         response.send()
     }
 })
