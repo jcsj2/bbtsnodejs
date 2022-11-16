@@ -16,6 +16,13 @@ class UsuarioController {
         const usuarios = this.usuarioModel.listar()
         res.json(usuarios)
     }
+
+    login(req, res) {
+        //const body = req.body
+        const { body } = req
+        const usuario = this.usuarioModel.login(body.email, body.senha)
+        res.json(usuario)
+    }
 }
 
 export default UsuarioController

@@ -26,6 +26,28 @@ class UsuarioModel {
         return usuarios
     }
 
+    login(email, senha) {
+
+        const usuarioPorEmail = this.usuarios.find(usuario => usuario.email === email)
+
+        if (usuarioPorEmail) {
+
+            const senhasConferem = bcrypt.compareSync(senha, usuarioPorEmail.senha)
+
+            if (senhasConferem) {
+                return {
+                    nome: usuarioPorEmail.nome,
+                    email: usuarioPorEmail.email
+                }
+            } else {
+
+            }
+
+        } else {
+
+        }
+    }
+
 }
 
 export default UsuarioModel
