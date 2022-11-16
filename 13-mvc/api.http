@@ -1,0 +1,13 @@
+###
+POST http://localhost:3000/usuarios/criar HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Jose Claudio",
+    "email": "jose@email.com",
+    "senha": "123456"
+}
+
+###
+
+GET http://localhost:3000/usuarios/listar 
