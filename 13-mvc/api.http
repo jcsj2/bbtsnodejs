@@ -24,13 +24,13 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/filmes/criar HTTP/1.1
 Content-Type: application/json
+Authorization: sabadou
 
 {
     "titulo": "Exterminador do Futuro 2",
     "descricao": "Filme de um robo, bem bacana",
     "categoria": "Ficção Cientifica"
 }
-
 ###
 
 GET http://localhost:3000/filmes/listar 

@@ -1,16 +1,15 @@
 class FilmeModel {
+  constructor() {
+    this.filmes = [];
+  }
 
-    constructor() {
-        this.filmes = []
-    }
+  criar(dadosFilme) {
+    this.filmes.push(dadosFilme);
+  }
 
-    criar(dadosFilme) {
-        this.filmes.push(dadosFilme)
-    }
-
-    listar() {
-        return this.filmes
-    }
+  listar() {
+    return this.filmes;
+  }
 }
 
-export default FilmeModel
+export default FilmeModel;
