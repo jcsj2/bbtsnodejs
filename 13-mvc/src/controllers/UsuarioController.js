@@ -1,3 +1,4 @@
+import * as yup from 'yup';
 // eslint-disable-next-line import/extensions
 import UsuarioModel from '../models/UsuarioModel.js';
 
@@ -8,8 +9,19 @@ class UsuarioController {
 
   criar(req, res) {
     const { body } = req;
-    this.usuarioModel.criar(body);
-    res.send('Usuario criado');
+
+    const validador = yup.object().shape({
+      nome: yup.string().required(),
+      email: yup.string().email(),
+      senha: yup.string().required().min(6),
+    });
+
+    if (validador.isValidSync(body)) {
+      this.usuarioModel.criar(body);
+      res.send('Usuario criado');
+    } else {
+      res.status(400).send('Dados inválidos');
+    }
   }
 
   listar(req, res) {

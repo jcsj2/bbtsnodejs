@@ -39,6 +39,8 @@ app.use(autenticador);
 app.get('/usuarios/listar', usuarioController.listar.bind(usuarioController));
 app.post('/filmes/criar', filmeController.criar.bind(filmeController));
 
+app.post('/locacoes/criar', locacaoController.criar.bind(locacaoController));
+
 app.listen(3000, () => {
   console.log('Servidor iniciado');
 });

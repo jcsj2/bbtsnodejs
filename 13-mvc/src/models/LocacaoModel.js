@@ -4,9 +4,22 @@ class LocacaoModel {
     this.filmeModel = filmeModel;
   }
 
-  criar(filmes, dataDaLocacao) {
+  criar(dadosLocacao) {
+    const { codigosFilmes } = dadosLocacao;
 
-    // consultar se filme existe
+    const filmesCadastrados = this.filmeModel.listar();
+
+    const codigosFilmesCadastrados = filmesCadastrados
+      .map((filmeCadastrado) => filmeCadastrado.codigo);
+
+    const filmesExistem = codigosFilmes
+      .every((codigoFilme) => codigosFilmesCadastrados.includes(codigoFilme));
+
+    if (!filmesExistem) {
+      throw new Error('Existem filmes inválidos');
+    }
+
+    this.locacoes.push(dadosLocacao);
   }
 }
 

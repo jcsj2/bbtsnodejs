@@ -24,9 +24,10 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/filmes/criar HTTP/1.1
 Content-Type: application/json
-Authorization: sabadou
+Authorization: sextou
 
 {
+    "codigo": "002",
     "titulo": "Exterminador do Futuro 2",
     "descricao": "Filme de um robo, bem bacana",
     "categoria": "Ficção Cientifica"
@@ -34,3 +35,14 @@ Authorization: sabadou
 ###
 
 GET http://localhost:3000/filmes/listar 
+
+
+### -- Locações
+POST http://localhost:3000/locacoes/criar HTTP/1.1
+Content-Type: application/json
+Authorization: sextou
+
+{
+    "codigosFilmes": ["0012"],
+    "dataLocacao": "2022-01-01"
+}
