@@ -1,9 +1,6 @@
-// eslint-disable-next-line import/extensions
-import FilmeModel from '../models/FilmeModel.js';
-
 class FilmeController {
-  constructor() {
-    this.filmeModel = new FilmeModel();
+  constructor(filmeModel) {
+    this.filmeModel = filmeModel;
   }
 
   criar(req, res) {

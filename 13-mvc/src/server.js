@@ -3,6 +3,8 @@ import express from 'express';
 import morgan from 'morgan';
 import UsuarioController from './controllers/UsuarioController.js';
 import FilmeController from './controllers/FilmeController.js';
+import LocacaoController from './controllers/LocacaoController.js';
+import FilmeModel from './models/FilmeModel.js';
 
 const app = express();
 app.use(morgan('dev'));
@@ -20,8 +22,11 @@ const autenticador = (req, res, next) => {
   }
 };
 
+const filmeModel = new FilmeModel();
+
 const usuarioController = new UsuarioController();
-const filmeController = new FilmeController();
+const filmeController = new FilmeController(filmeModel);
+const locacaoController = new LocacaoController(filmeModel);
 
 // rotas publicas
 app.post('/usuarios/criar', usuarioController.criar.bind(usuarioController));
