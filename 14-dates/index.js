@@ -5,20 +5,25 @@ const data = new Date(2022, 1, 20, 13, 45, 40, 2)
 
 const aniversario = "05/03/1985"
 const partesData = aniversario.split('/')
-// console.log(new Date(partesData[2], Number(partesData[1]) - 1, partesData[0]))
+//console.log(new Date(partesData[2], Number(partesData[1]) - 1, partesData[0]))
 
-// console.log('data.toString()', data.toString())
-// console.log('data.toTimeString()', data.toTimeString())
-// console.log('data.toUTCString()', data.toUTCString())
-// console.log('data.toDateString()', data.toDateString())
-// console.log('data.toISOString()', data.toISOString())
-// console.log('data.toLocaleString()', data.toLocaleString())
-// console.log('data.toLocaleDateString()', data.toLocaleDateString())
-// console.log('data.toLocaleTimeString()', data.toLocaleTimeString())
+ console.log('data.toString()', data.toString())
+ console.log('data.toTimeString()', data.toTimeString())
+ console.log('data.toUTCString()', data.toUTCString())
+ console.log('data.toDateString()', data.toDateString())
+ console.log('data.toISOString()', data.toISOString())
+ console.log('data.toLocaleString()', data.toLocaleString())
+ console.log('data.toLocaleDateString()', data.toLocaleDateString())
+ console.log('data.toLocaleTimeString()', data.toLocaleTimeString())
 
-// console.log(data.toLocaleString('pt-BR'))
-// console.log(data.toLocaleDateString('pt-BR'))
-// console.log(data.toLocaleTimeString('pt-BR'))
+ console.log("----------------------")
+
+ console.log("data.toLocaleString('pt-BR')", data.toLocaleString('pt-BR'))
+ console.log("data.toLocaleDateString('pt-BR')", data.toLocaleDateString('pt-BR'))
+ console.log("data.toLocaleTimeString('pt-BR')", data.toLocaleTimeString('pt-BR'))
+
+
+ console.log("----------------------")
 
 // console.log(data.getDate())
 
@@ -44,17 +49,20 @@ const compararDatas = (data1, data2) => {
     }
 
     if (timestamp1 < timestamp2) {
-        // console.log(`${formatarData(data1)} é menor que ${formatarData(data2)}`)
+         console.log(`${formatarData(data1)} é menor que ${formatarData(data2)}`)
     } else if (timestamp1 > timestamp2) {
-        // console.log(`${formatarData(data1)} é maior que ${formatarData(data2)}`)
+         console.log(`${formatarData(data1)} é maior que ${formatarData(data2)}`)
     } else {
-        // console.log('São iguais')
+         console.log('São iguais')
     }
 }
 
 compararDatas(new Date(2022, 1, 1), new Date(2022, 3, 5))
 compararDatas(new Date(2022, 9, 1), new Date(2022, 3, 5))
 compararDatas(new Date(2022, 3, 5), new Date(2022, 3, 5))
+
+
+console.log("----------------------")
 
 // date-fns
 
@@ -69,8 +77,8 @@ const dataComDiasAdicionados = dateFns.add(novaData, {
     days: 4
 })
 
-console.log(novaData)
-console.log(dataComDiasAdicionados)
+console.log('novaData ', novaData)
+console.log('dataComDiasAdicionados ', dataComDiasAdicionados)
 
 console.log(dateFns.addDays(novaData, 2))
 
