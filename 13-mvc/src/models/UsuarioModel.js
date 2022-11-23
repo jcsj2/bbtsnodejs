@@ -1,4 +1,7 @@
+/* eslint-disable import/extensions */
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import constants from '../infra/constants.js';
 
 class UsuarioModel {
   constructor() {
@@ -29,10 +32,14 @@ class UsuarioModel {
       const senhasConferem = bcrypt.compareSync(senha, usuarioPorEmail.senha);
 
       if (senhasConferem) {
-        return {
+        const dadosParaOToken = {
           nome: usuarioPorEmail.nome,
-          email: usuarioPorEmail.email,
-          chave: 'sextou',
+        };
+
+        const tokenGerado = jwt.sign(dadosParaOToken, constants.senhaToken);
+
+        return {
+          token: tokenGerado,
         };
       }
       throw new Error(msgErro);

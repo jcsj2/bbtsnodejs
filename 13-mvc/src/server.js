@@ -1,10 +1,12 @@
 /* eslint-disable import/extensions */
 import express from 'express';
 import morgan from 'morgan';
+import jwt from 'jsonwebtoken';
 import UsuarioController from './controllers/UsuarioController.js';
 import FilmeController from './controllers/FilmeController.js';
 import LocacaoController from './controllers/LocacaoController.js';
 import FilmeModel from './models/FilmeModel.js';
+import constants from './infra/constants.js';
 
 const app = express();
 app.use(morgan('dev'));
@@ -14,8 +16,13 @@ const autenticador = (req, res, next) => {
   const { headers } = req;
   const { authorization } = headers;
 
-  if (authorization && authorization === 'sextou') {
-    next();
+  if (authorization) {
+    try {
+      jwt.verify(authorization, constants.senhaToken);
+      next();
+    } catch (err) {
+      res.sendStatus(401);
+    }
   } else {
     // 401 - Unauthorized
     res.sendStatus(401);
