@@ -24,7 +24,7 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/filmes/criar HTTP/1.1
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiSm9zZSBDbGF1ZGlvIiwiaWF0IjoxNjY5MjEwMDAyfQ.7TDv0z1PCpiS9exh6V0Q-aGHZ7ztdXPZSHQVwAZkY-Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiSm9zZSBDbGF1ZGlvIiwiaWF0IjoxNjY5MzczNzA5fQ.ZFQW4TqMU17PCZFlaTWCg5bakkZm0GQ_gxIuI5ku2Tk
 
 {
     "codigo": "002",

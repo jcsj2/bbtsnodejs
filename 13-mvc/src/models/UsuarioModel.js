@@ -1,7 +1,6 @@
 /* eslint-disable import/extensions */
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import constants from '../infra/constants.js';
 
 class UsuarioModel {
   constructor() {
@@ -36,7 +35,7 @@ class UsuarioModel {
           nome: usuarioPorEmail.nome,
         };
 
-        const tokenGerado = jwt.sign(dadosParaOToken, constants.senhaToken);
+        const tokenGerado = jwt.sign(dadosParaOToken, process.env.SENHA_DO_JWT);
 
         return {
           token: tokenGerado,

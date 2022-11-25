@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+import * as dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
 import jwt from 'jsonwebtoken';
@@ -6,7 +7,8 @@ import UsuarioController from './controllers/UsuarioController.js';
 import FilmeController from './controllers/FilmeController.js';
 import LocacaoController from './controllers/LocacaoController.js';
 import FilmeModel from './models/FilmeModel.js';
-import constants from './infra/constants.js';
+
+dotenv.config();
 
 const app = express();
 app.use(morgan('dev'));
@@ -18,7 +20,7 @@ const autenticador = (req, res, next) => {
 
   if (authorization) {
     try {
-      jwt.verify(authorization, constants.senhaToken);
+      jwt.verify(authorization, process.env.SENHA_DO_JWT);
       next();
     } catch (err) {
       res.sendStatus(401);
