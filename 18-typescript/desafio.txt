@@ -1,0 +1,8 @@
+
+
+
+Cliente --> Fisico e Juridico
+    ===> Endereco
+    ===> Lista de Empresas (so pra juridico) [nome, nome fantasia]
+
+    --> Cliente => Imprimir todas a lista de empresas apenas com o nome

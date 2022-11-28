@@ -101,3 +101,9 @@ pagandoPeloPayPal.doPay(informacoesCartao)
 pagandoPelaStripe.doPay(informacoesCartao)
 pagandoPeloPagseguro.doPay(informacoesCartao)
 
+const mapa = new Map<string, string>()
+mapa.set('chave1', 'valor1')
+mapa.set('chave2', 'valor2')
+
+// const nomes: Array<string> = ['asdasd', 'qssdfs']
+const nomes: string[] = ['asdasd', 'qssdfs']
